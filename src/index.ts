@@ -5,11 +5,13 @@ import server from './server'
 const pkg = require('../package')
 
 const description = `
-  Running elfiejs will launch a local web server which hosts a
-  browser application. The app will capture your keyboard and send
-  the keystrokes to the server part, which in turn will control the
-  ELFIE drone. Make sure that your computer is connected to your
-  drone's wireless network before running elfiejs.
+  Make sure that your computer is connected to your
+  drone's wireless network before running elfiejs!
+
+  elfiejs will launch a local web server which hosts a browser
+  application. The app will capture your keyboard and send the
+  keystrokes to the server part, which in turn will control
+  the ELFIE drone.
 `
 
 let port = 3000
