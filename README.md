@@ -9,15 +9,15 @@ Control your ELFIE drone using NodeJS
 ## Getting started
 1. Install the program and print the help
 ```sh
-> npm install -g elfiejs
-> elfiejs -h
+npm install -g elfiejs
+elfiejs -h
 ```
 
-3. Connect your computer to your drone's wireless network.
+2. Connect your computer to your drone's wireless network.
 
-4. Run elfiejs
+3. Run elfiejs and follow the instructions printed to the console
 ```sh
-> elfiejs
+elfiejs
 ```
 
 ## How does it work?
