@@ -1,10 +1,10 @@
 # elfiejs
-Control your ELFIE drone using NodeJS
+Control your ELFIE drone using Node.js
 
 ## Prerequisites
 - An [ELFIE](https://www.firstquadcopter.com/reviews/jjrc-h37-elfie-quadcopter-review/) drone (or similar)
 - Ability to connect to the drone's wireless network
-- [NodeJS](https://nodejs.org/en/) version 8 or later
+- [Node.js](https://nodejs.org/en/) version 8 or later
 
 ## Getting started
 1. Install the program and print the help
