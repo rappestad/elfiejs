@@ -1,6 +1,6 @@
 {
   "name": "elfiejs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Control your ELFIE drone using NodeJS",
   "main": "dist/drone.js",
   "bin": "dist/index.js",
