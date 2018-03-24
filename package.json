@@ -3,8 +3,9 @@
   "version": "0.1.1",
   "description": "Control your ELFIE drone using NodeJS",
   "main": "dist/drone.js",
-  "bin": "dist/server.js",
+  "bin": "dist/index.js",
   "dependencies": {
+    "commander": "^2.15.1",
     "express": "^4.16.3",
     "socket.io": "^2.0.4"
   },

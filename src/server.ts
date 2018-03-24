@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { join } from 'path'
 import { Drone } from './drone'
 
@@ -49,6 +47,4 @@ io.on('connection', function (socket) {
   })
 })
 
-http.listen(3000, function () {
-  console.log('listening on *:3000')
-})
+export default http
