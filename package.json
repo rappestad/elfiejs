@@ -1,0 +1,55 @@
+{
+  "name": "elfiejs",
+  "version": "0.1.0",
+  "description": "Control your ELFIE drone using NodeJS",
+  "main": "dist/drone.js",
+  "bin": "dist/server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/node": "^9.6.0",
+    "@types/socket.io": "^1.4.32",
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.2",
+    "rimraf": "^2.6.2",
+    "standard": "^11.0.1",
+    "tslint": "^5.9.1",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "dev": "concurrently \"tsc -w\" \"nodemon -w dist dist/server.js\"",
+    "lint": "tslint --project . && standard public/**/*.js",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "files": [
+    "dist",
+    "public"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rappestad/elfiejs.git"
+  },
+  "keywords": [
+    "drone",
+    "elfie"
+  ],
+  "author": "Olof Rappestad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rappestad/elfiejs/issues"
+  },
+  "homepage": "https://github.com/rappestad/elfiejs#readme",
+  "standard": {
+    "globals": [
+      "THREE",
+      "io",
+      "requestAnimationFrame"
+    ]
+  }
+}
