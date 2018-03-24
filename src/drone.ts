@@ -1,6 +1,6 @@
 import { Socket, createSocket } from 'dgram'
 
-export type Command = '' | 'start' | 'stop'
+type Command = '' | 'start' | 'stop'
 
 export class Drone {
   private client: Socket
