@@ -12,6 +12,9 @@ const description = `
   application. The app will capture your keyboard and send the
   keystrokes to the server part, which in turn will control
   the ELFIE drone.
+
+  Start the drone with P and shut it off with O. Control the
+  throttle, yaw, pitch and roll with WASD and the arrow keys.
 `
 
 let port = 3000
