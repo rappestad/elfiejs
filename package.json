@@ -22,7 +22,7 @@
     "typescript": "^2.7.2"
   },
   "scripts": {
-    "dev": "concurrently \"tsc -w\" \"nodemon -w dist dist/server.js\"",
+    "dev": "concurrently \"tsc -w\" \"nodemon -w dist dist/index.js\"",
     "lint": "tslint --project . && standard public/**/*.js",
     "prebuild": "rimraf dist",
     "build": "tsc",
