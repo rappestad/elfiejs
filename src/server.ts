@@ -16,14 +16,22 @@ app.get('/', function (req, res) {
   res.sendFile(join(__dirname, '../public/index.html'))
 })
 
+let pitchAndRollMultiplier = 1
+
+http.setPitchAndRollMultiplier = (factor) => {
+  pitchAndRollMultiplier = clamp(Number(factor), 0, 1)
+}
+
+function clamp (value, min, max) {
+  return Math.min(1, Math.max(0, value))
+}
+
 io.on('connection', function (socket) {
   drone.idle()
 
   socket.on('keys', (keys) => {
     if (keys.includes('p')) return drone.start()
     if (keys.includes('o')) return drone.stop()
-
-    const force = 0.5
 
     let throttle = 0
     let roll = 0
@@ -35,12 +43,12 @@ io.on('connection', function (socket) {
 
     if (keys.includes('d')) yaw += 1
     if (keys.includes('a')) yaw -= 1
+    console.log(pitchAndRollMultiplier)
+    if (keys.includes('ArrowUp')) pitch += pitchAndRollMultiplier
+    if (keys.includes('ArrowDown')) pitch -= pitchAndRollMultiplier
 
-    if (keys.includes('ArrowUp')) pitch += force
-    if (keys.includes('ArrowDown')) pitch -= force
-
-    if (keys.includes('ArrowRight')) roll += force
-    if (keys.includes('ArrowLeft')) roll -= force
+    if (keys.includes('ArrowRight')) roll += pitchAndRollMultiplier
+    if (keys.includes('ArrowLeft')) roll -= pitchAndRollMultiplier
 
     drone.setState(throttle, roll, pitch, yaw)
 

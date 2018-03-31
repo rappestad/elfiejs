@@ -24,6 +24,7 @@ program
   .description(description.trim())
   .usage('[options]')
   .option('-p, --port <number>', 'port number of the web server', setPort)
+  .option('-m, --multiplier <0..1>', 'set pitch and roll multiplier', server.setPitchAndRollMultiplier)
   .parse(process.argv)
 
 function setPort (val) {
