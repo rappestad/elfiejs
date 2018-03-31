@@ -33,14 +33,14 @@ io.on('connection', function (socket) {
     if (keys.includes('w')) throttle += 1
     if (keys.includes('s')) throttle -= 1
 
-    if (keys.includes('d')) roll += force
-    if (keys.includes('a')) roll -= force
+    if (keys.includes('d')) yaw += force
+    if (keys.includes('a')) yaw -= force
 
     if (keys.includes('ArrowUp')) pitch += force
     if (keys.includes('ArrowDown')) pitch -= force
 
-    if (keys.includes('ArrowRight')) yaw += 1
-    if (keys.includes('ArrowLeft')) yaw -= 1
+    if (keys.includes('ArrowRight')) roll += 1
+    if (keys.includes('ArrowLeft')) roll -= 1
 
     drone.setState(throttle, roll, pitch, yaw)
 
