@@ -10,6 +10,7 @@ const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
 app.use(express.static(join(__dirname, '../public')))
+app.use(express.static(join(__dirname, '../node_modules/three/build')))
 
 app.get('/', function (req, res) {
   res.sendFile(join(__dirname, '../public/index.html'))
